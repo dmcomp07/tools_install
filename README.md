@@ -1,4 +1,4 @@
-# tools_installation_scripts
+# tools_installation_scripts for Ubuntu OS
 
 1. [Docker](https://raw.githubusercontent.com/dmcomp07/tools_install/main/docker.sh)
 2. [Jenkins](https://raw.githubusercontent.com/dmcomp07/tools_install/main/jenkins.sh)
