@@ -1,5 +1,23 @@
 #!bin/bash
 
+# Check for hardware prerequisites
+mem_size=$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')
+echo "Minimum memory required : 4Gi (4194304KB)"
+echo "Available memory : $mem_size KB "
+if [[ $mem_size -lt 4194304 ]]; then
+  echo "Error: Your system does not meet the minimum memory requirement of 4GB " >&2
+  exit 1
+fi
+
+num_cpus=$(nproc)
+echo "Minimum CPU cores required : 2 cores"
+echo "Available CPU cores : $num_cpus cores"
+if [[ $num_cpus -lt 2 ]]; then
+  echo "Error: Your system does not meet the minimum CPU requirement of 2 cores " >&2
+  exit 1
+fi
+
+
 sudo apt update -y
 sudo useradd --system --no-create-home --shell /bin/false prometheus
 wget https://github.com/prometheus/prometheus/releases/download/v2.47.1/prometheus-2.47.1.linux-amd64.tar.gz
