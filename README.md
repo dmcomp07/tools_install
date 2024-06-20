@@ -9,3 +9,4 @@
 7. [Kubernetes](https://github.com/dmcomp07/k8-install-script)
 8. [Prometheus](https://raw.githubusercontent.com/dmcomp07/tools_install/main/prometheus.sh)
 9. [Node-Exporter](https://raw.githubusercontent.com/dmcomp07/tools_install/main/node-exporter.sh)
+10. [Grafana](https://raw.githubusercontent.com/dmcomp07/tools_install/main/grafana.sh)
