@@ -2,9 +2,9 @@
 
 # Check for hardware prerequisites
 mem_size=$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')
-echo "Minimum memory required : 4Gi (4194304KB)"
+echo "Minimum memory required : 4Gi "
 echo "Available memory : $mem_size KB "
-if [[ $mem_size -lt 4194304 ]]; then
+if [[ $mem_size -lt 4000000 ]]; then
   echo "Error: Your system does not meet the minimum memory requirement of 4GB " >&2
   exit 1
 fi
