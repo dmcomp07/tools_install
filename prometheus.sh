@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Check for hardware prerequisites
 mem_size=$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')
