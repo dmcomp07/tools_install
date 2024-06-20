@@ -15,3 +15,7 @@ sudo apt-get update -y
 sudo apt-get install jenkins -y
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
+
+#IF jenkins pipeline failes with docker error
+sudo usermod -a -G docker jenkins
+sudo systemctl restart jenkins
