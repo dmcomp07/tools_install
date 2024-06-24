@@ -43,7 +43,9 @@ install_docker() {
 # Function to run SonarQube container
 run_sonarqube() {
     echo "Running SonarQube container..."
-    sudo docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+    sudo docker run -d --name sonarqube -p 9000:9000 -p 9092:9092 mc1arke/sonarqube-with-community-branch-plugin
+	sudo docker start sonarqube
+	sudo docker ps
 }
 
 # Main script
